@@ -26,6 +26,7 @@ nav {
     flex: 1 10 auto;
     display: flex;
     align-items: center;
+    height: 130px;
 }
 
 
@@ -71,9 +72,26 @@ nav img{
     max-width: 100px;
 }
 
-main>div>input{
-    width: 50%;
-    height: 10%;
-    font-size: 100%;
-    min-height: 30px;
+main{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    grid-gap:3em;
+    margin-top:60px;
+}
+
+main>div{
+    padding: 100px;
+    background-color: #64aaac;
+}
+
+#burger{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    background-color: #fff;
+    margin-right: 0;
+    right: 0;
+    top:130px;
+    display: none;
 }

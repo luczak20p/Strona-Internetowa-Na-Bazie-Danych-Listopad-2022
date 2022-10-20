@@ -99,6 +99,10 @@ main>div{
     font-size: 40px;
 }
 
+main>div>a{
+    color: #fff;
+}
+
 
 
 main>div>input{
