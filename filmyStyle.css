@@ -66,19 +66,20 @@ nav img {
   max-width: 100px;
 }
 
-main > div {
+main {
   display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px;
   padding: 10px;
+  grid-gap: 3em;
+  width: 1200px;
+  margin: auto;
   margin-top: 60px;
-  justify-items: center;
-  width: 100%;
 }
 
-main > div > div {
-  padding: 100px;
-  width: 70%;
+main > div {
+  height: 350px;
   background-color: #64aaac;
-  border: solid 1px #000;
+  text-align: center;
 }
 
 #burger {
