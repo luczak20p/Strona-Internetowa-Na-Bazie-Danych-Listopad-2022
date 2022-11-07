@@ -26,25 +26,19 @@
       <div id="burger"></div>
     </nav>
     <main>
-      <div>
-        <div class=test>
-          <img src=user.png alt=twasz>
-          <div>
-            <p>Uwucjusz Owowski</p>
-            <p>taki aktor</p>
-          </div>
-        </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div>
+      <?php
+
+      require_once("PoloczenieZBaza.php");
+      $poloczenie1 = PoloczenieZBaza::getInstance();
+      $poloczenie1->getPolaczenie()->query("use osskars");
+      
+      $select = $poloczenie1->getPolaczenie()->query("SELECT * FROM aktorzy");
+      while($row=$select->fetch()){
+          echo "<div> <img src=".$row["zdjecie"]." alt=uwu> <div><p>".$row['imie']." ".$row['nazwisko']."</p></div></div>"; //użyć tego do wypisywania aktorów itp. z bazy na stronę, img nazwy w bazie, a obrazy w folderze img
+  
+      }
+      ?>
       </div>
     </main>
   </body>

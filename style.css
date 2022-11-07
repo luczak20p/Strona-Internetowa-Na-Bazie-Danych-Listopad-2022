@@ -66,6 +66,10 @@ nav img {
   max-width: 100px;
 }
 
+main{
+  width:99%;
+}
+
 main > div {
   display: grid;
   padding: 10px;
