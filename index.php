@@ -38,8 +38,8 @@ if(!isset($_SESSION['motyw'])){
         <form action=walidacja.php method=post>
         <p>Login</p>
         <input name=login id=login />
-        <p name=password id=password>Hasło</p>
-        <input />
+        <p>Hasło</p>
+        <input name=password id=password />
         <input id=submito type=submit value=Zaloguj>
         </form>
         <a href="rejestracja.php">Nie posiadasz konta? Załóż je!</a>
