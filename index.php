@@ -35,12 +35,14 @@ if(!isset($_SESSION['motyw'])){
 
     <main id=formularzLogowania>
       <div>
+        <form action=walidacja.php method=post>
         <p>Login</p>
+        <input name=login id=login />
+        <p name=password id=password>Hasło</p>
         <input />
-        <p>Hasło</p>
-        <input />
-        <button>Zaloguj</button>
-        <a href="#">Nie posiadasz konta? Załóż je!</a>
+        <input id=submito type=submit value=Zaloguj>
+        </form>
+        <a href="rejestracja.php">Nie posiadasz konta? Załóż je!</a>
       </div>
       <img src="logowanie.jpg" alt="logowanie" id="tlo" />
     </main>

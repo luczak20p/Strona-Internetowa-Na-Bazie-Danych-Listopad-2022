@@ -167,9 +167,10 @@ main > div > div >img {
   color: #fff;
   font-family: Calibri;
   font-size: 40px;
+  padding:50px;
 }
 
-#formularzLogowania > div > input {
+#formularzLogowania > div  input {
   width: 50%;
   height: 10%;
   font-size: 100%;
@@ -177,7 +178,7 @@ main > div > div >img {
   min-width: 270px;
 }
 
-#formularzLogowania > div > button {
+#formularzLogowania > div #submito {
   width: 30%;
   min-width: 180px;
   margin-top: 10px;
