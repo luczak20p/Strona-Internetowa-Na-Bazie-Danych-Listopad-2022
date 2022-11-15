@@ -21,7 +21,7 @@ create table aktorzy(
 );
 
 create table filmy(
-    id_rezyser int auto_increment primary key,
+    id_filmu int auto_increment primary key,
     tytul varchar(45),
     opis text,
     gatunek varchar(45),
@@ -29,3 +29,9 @@ create table filmy(
     FOREIGN KEY (rezyser) REFERENCES rezyserzy(id_rezyser),
     zdjecie text
 );
+
+INSERT INTO `filmy` (`id_rezyser`, `tytul`, `opis`, `gatunek`, `rezyser`,`zdjecie`) VALUES
+(2, "Morbius2", "filmy o chłopie co wampirem jest", "najlepszy", 1,"logowanieSmall.png"),
+(3, "Morbius3", "filmy o chłopie co wampirem jest", "najlepszy", 1,"logowanieSmall.png"),
+(4, "Morbius4", "filmy o chłopie co wampirem jest", "najlepszy", 1,"logowanieSmall.png"),
+(5, "Morbius5", "filmy o chłopie co wampirem jest", "najlepszy", 1,"logowanieSmall.png");

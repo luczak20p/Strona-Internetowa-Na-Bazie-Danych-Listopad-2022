@@ -1,10 +1,20 @@
+<?php
+session_start();
+ob_start();
+
+if(!isset($_SESSION['motyw'])){
+  $_SESSION['motyw']='styleUser.css';
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link id=stylowanie rel="stylesheet" href=<?php echo $_SESSION['motyw'] ?> />
     <script src="script.js" defer></script>
   </head>
   <body>

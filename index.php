@@ -1,12 +1,22 @@
+<?php
+session_start();
+ob_start();
+
+if(!isset($_SESSION['motyw'])){
+  $_SESSION['motyw']='styleUser.css';
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styleLogowanie.css" />
+    <link id=stylowanie rel="stylesheet" href=<?php echo $_SESSION['motyw'] ?> />
   </head>
-  <body>
+  <body id=logowanie>
     <nav>
       <div>
         <a href="#">Osskars</a>
@@ -18,12 +28,12 @@
         <li><a href="rezyserzy.php">Reżyserzy</a></li>
       </ul>
       <div>
-        <p>użytkownik</p>
+        <a href="uzytkownik.php">użytkownik</a>
         <img src="user.png" alt="użytkownik" />
       </div>
     </nav>
 
-    <main>
+    <main id=formularzLogowania>
       <div>
         <p>Login</p>
         <input />

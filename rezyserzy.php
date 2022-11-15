@@ -1,4 +1,11 @@
+<?php
+session_start();
+ob_start();
 
+if(!isset($_SESSION['motyw'])){
+  $_SESSION['motyw']='styleUser.css';
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +13,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link id=stylowanie rel="stylesheet" href=<?php echo $_SESSION['motyw'] ?> />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -21,7 +28,7 @@
         <li><a href="rezyserzy.php">Reżyserzy</a></li>
       </ul>
       <div>
-        <p>użytkownik</p>
+      <a href="uzytkownik.php">użytkownik</a>
 
         <img src="user.png" alt="użytkownik" />
       </div>
@@ -37,7 +44,7 @@
       
       $select = $poloczenie1->getPolaczenie()->query("SELECT * FROM rezyserzy");
       while($row=$select->fetch()){
-          echo "<div> <img src=".$row["zdjecie"]." alt=uwu> <div><p>".$row['imie']." ".$row['nazwisko']."</p></div></div>"; //użyć tego do wypisywania aktorów itp. z bazy na stronę, img nazwy w bazie, a obrazy w folderze img
+          echo "<div> <img src=".$row["zdjecie"]." alt=uwu> <div><p><a href=rezyser.php>".$row['imie']." ".$row['nazwisko']."</a></p><p>".$row['opis']."</p></div></div>"; //użyć tego do wypisywania aktorów itp. z bazy na stronę, img nazwy w bazie, a obrazy w folderze img
   
       }
       ?>
