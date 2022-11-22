@@ -13,7 +13,7 @@ if(!isset($_SESSION['motyw'])){
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styleUser.css" />
+    <link id=stylowanie rel="stylesheet" href=<?php echo $_SESSION['motyw'] ?> />
   </head>
   <body>
     <nav>
@@ -32,18 +32,20 @@ if(!isset($_SESSION['motyw'])){
       </div>
     </nav>
     <main id=Filmy>
-    <?php
+       
+      <?php
 
-require_once("PoloczenieZBaza.php");
-$poloczenie1 = PoloczenieZBaza::getInstance();
-$poloczenie1->getPolaczenie()->query("use surpr1sen_osskars");
-
-$select = $poloczenie1->getPolaczenie()->query("SELECT * FROM filmy");
-while($row=$select->fetch()){
-    echo "<div> <a href=film.php><img src=".$row["zdjecie"]." alt=uwu><a> <p>".$row['tytul']."</p><p>".$row['opis']."</p></div>"; //użyć tego do wypisywania aktorów itp. z bazy na stronę, img nazwy w bazie, a obrazy w folderze img
-
-}
-?>
+      require_once("PoloczenieZBaza.php");
+      $poloczenie1 = PoloczenieZBaza::getInstance();
+      $poloczenie1->getPolaczenie()->query("use osskars");
+      
+      $select = $poloczenie1->getPolaczenie()->query("SELECT * FROM filmy");
+      while($row=$select->fetch()){
+          echo "<div> <a href=film.php><img src=".$row["zdjecie"]." alt=uwu><a> <p>".$row['tytul']."</p><p>".$row['opis']."</p></div>"; //użyć tego do wypisywania aktorów itp. z bazy na stronę, img nazwy w bazie, a obrazy w folderze img
+  
+      }
+      ?>
+      
     </main>
   </body>
 </html>

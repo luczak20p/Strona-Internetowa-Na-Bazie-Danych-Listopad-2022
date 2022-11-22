@@ -36,17 +36,18 @@ if(!isset($_SESSION['motyw'])){
     <main id=formularzLogowania>
       <div>
         <form>
-        <p>Email</p>
-        <input />
         <p>Login</p>
+        <input />
+        <p>Coś o sobie</p>
         <input />
         <p>Hasło</p>
         <input />
+
         <input type=submit value=Zarejestruj id=submito>
         </form>
         
       </div>
-      <img src="logowanie.jpg" alt="logowanie" id="tlo" />
     </main>
+    <img src="logowanie.jpg" alt="logowanie" id="tlo" />
   </body>
 </html>

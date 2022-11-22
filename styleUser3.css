@@ -184,10 +184,12 @@ main > div > div >img {
   margin-top: 10px;
   height: 50px;
   border-radius: 10px;
-  background-color: #38a3a5;
+  background-color: #000;
   border: none;
   font-size: 20px;
   color: #fff;
+  display:block;
+  cursor: pointer;
 }
 
 #formularzLogowania a{
@@ -213,4 +215,11 @@ main > div > div >img {
 #Filmy>div>div{
   height: 350px;
   text-align: center;
+}
+
+.pogoda{
+  position: absolute;
+
+  color: #000;
+  background-color: #f3ec84;
 }

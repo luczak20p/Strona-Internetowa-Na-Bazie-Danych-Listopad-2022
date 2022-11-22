@@ -16,6 +16,7 @@ if(!isset($_SESSION['motyw'])){
     <title>Document</title>
     <link id=stylowanie rel="stylesheet" href=<?php echo $_SESSION['motyw'] ?> />
     <script src="script.js" defer></script>
+    <script src="Weather.js" defer></script>
   </head>
   <body>
     <nav>
@@ -29,14 +30,17 @@ if(!isset($_SESSION['motyw'])){
         <li><a href="rezyserzy.php">Reżyserzy</a></li>
       </ul>
       <div>
-        <p>użytkownik</p>
+        <a href="uzytkownik.php">użytkownik</a>
 
         <img src="user.png" alt="użytkownik" />
       </div>
       <div id="burger"></div>
     </nav>
+    <div class=pogoda>
+      <?php echo date('jS \of F Y h:i:s A')."<br>";?>
+    </div>
     <main>
-    <div>
+      <div>
       <?php
 
       require_once("PoloczenieZBaza.php");
@@ -45,7 +49,7 @@ if(!isset($_SESSION['motyw'])){
       
       $select = $poloczenie1->getPolaczenie()->query("SELECT * FROM aktorzy");
       while($row=$select->fetch()){
-          echo "<div> <img src=".$row["zdjecie"]." alt=uwu> <div><p>".$row['imie']." ".$row['nazwisko']."</p></div></div>"; //użyć tego do wypisywania aktorów itp. z bazy na stronę, img nazwy w bazie, a obrazy w folderze img
+          echo "<div> <img src=".$row["zdjecie"]." alt=uwu> <div><p><a href='aktor.php'>".$row['imie']." ".$row['nazwisko']."</a></p><p>".$row['opis']."</p></div></div>"; //użyć tego do wypisywania aktorów itp. z bazy na stronę, img nazwy w bazie, a obrazy w folderze img
   
       }
       ?>

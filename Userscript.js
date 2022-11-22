@@ -22,3 +22,8 @@ a[3].addEventListener('click', function () {
   document.querySelector('#stylowanie').href = href;
   b.value = href;
 });
+
+a[0].style.backgroundColor="#38a3a5"
+a[1].style.backgroundColor="#fff"
+a[2].style.backgroundColor="#b42727"
+a[3].style.backgroundColor="#f3ec84"

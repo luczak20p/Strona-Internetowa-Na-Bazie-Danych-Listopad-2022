@@ -2,6 +2,7 @@
 session_start();
 ob_start();
 
+
 if(!isset($_SESSION['motyw'])){
   $_SESSION['motyw']='styleUser.css';
 }
@@ -15,6 +16,7 @@ if(!isset($_SESSION['motyw'])){
     <title>Document</title>
     <link id=stylowanie rel="stylesheet" href=<?php echo $_SESSION['motyw'] ?> />
     <script src="script.js" defer></script>
+    <script src="Weather.js" defer></script>
   </head>
   <body>
     <nav>
@@ -28,12 +30,15 @@ if(!isset($_SESSION['motyw'])){
         <li><a href="rezyserzy.php">Reżyserzy</a></li>
       </ul>
       <div>
-      <a href="uzytkownik.php">użytkownik</a>
+        <a href="uzytkownik.php">użytkownik</a>
 
         <img src="user.png" alt="użytkownik" />
       </div>
       <div id="burger"></div>
     </nav>
+    <div class=pogoda>
+      <?php echo date('jS \of F Y h:i:s A')."<br>";?>
+    </div>
     <main>
       <div>
       <?php
@@ -49,6 +54,7 @@ if(!isset($_SESSION['motyw'])){
       }
       ?>
       </div>
+     
     </main>
   </body>
 </html>

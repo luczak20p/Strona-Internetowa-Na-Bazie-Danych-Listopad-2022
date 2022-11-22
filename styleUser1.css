@@ -187,6 +187,8 @@ main > div > div >img {
   border: none;
   font-size: 20px;
   color: #fff;
+  display:block;
+  cursor: pointer;
 }
 
 #formularzLogowania a{
@@ -212,4 +214,11 @@ main > div > div >img {
 #Filmy>div>div{
   height: 350px;
   text-align: center;
+}
+
+.pogoda{
+  position: absolute;
+
+  color: #000;
+  background-color: #64aaac;
 }

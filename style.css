@@ -108,30 +108,3 @@ main > div > div >img {
   top: 130px;
   display: none;
 }
-
-#motywy{
-  display: flex;
-  padding: 10px;
-  margin-top: 60px;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-}
-
-#motywy>div{
-  width: 100px;
-  height: 100px;
-  background-color: #64aaac;
-  border: solid 1px #000;
-  display: flex;
-  margin-bottom: 20px;
-  border-radius: 50px;
-}
-
-#motywy>div:hover{
-  background-color: #7ec0c2;
-}
-
-#kolor {
-  display: none;
-}
