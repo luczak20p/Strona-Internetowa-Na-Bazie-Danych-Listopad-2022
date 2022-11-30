@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #2b2b33;
+  overflow-x: hidden;
 }
 
 nav > ul {
@@ -54,6 +55,7 @@ nav > div {
   font-family: Calibri;
   color: #fff;
   font-size: 40px;
+  width:100%;
 }
 
 nav > div > a {
@@ -65,9 +67,8 @@ nav img {
   min-width: 50px;
   max-width: 100px;
 }
-
 main{
-  width:99%;
+    width:99%;
 }
 
 main > div {
@@ -83,6 +84,7 @@ main > div > div {
   background-color: #64aaac;
   border: solid 1px #000;
   display: flex;
+  margin-bottom:20px;
 }
 
 main > div > div >img {

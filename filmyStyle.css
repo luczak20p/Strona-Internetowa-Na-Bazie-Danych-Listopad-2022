@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #2b2b33;
+  overflow-x: hidden;
 }
 
 nav > ul {
@@ -54,6 +55,7 @@ nav > div {
   font-family: Calibri;
   color: #fff;
   font-size: 40px;
+  width:100%;
 }
 
 nav > div > a {
@@ -65,21 +67,27 @@ nav img {
   min-width: 50px;
   max-width: 100px;
 }
-
 main {
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px 200px;
+  grid-template-columns: 300px 300px 300px 300px;
   padding: 10px;
-  grid-gap: 3em;
+  grid-gap: 40px;
   width: 1200px;
   margin: auto;
   margin-top: 60px;
+  color:#fff;
 }
 
-main > div {
+main>div{
+    display:flex;
+    flex-direction:column;
+}
+
+main > div> div {
   height: 350px;
-  background-color: #64aaac;
+  
   text-align: center;
+  
 }
 
 #burger {

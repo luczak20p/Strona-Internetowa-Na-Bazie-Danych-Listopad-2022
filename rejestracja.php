@@ -2,17 +2,8 @@
 session_start();
 ob_start();
 
-if(!isset($_SESSION['login'])){
-  $_SESSION['login']!='Zaloguj się';
-   
-}
 if(!isset($_SESSION['motyw'])){
   $_SESSION['motyw']='styleUser.css';
-}
-if(isset($_SESSION['login'])){
-  if($_SESSION['login']==''){
-    $_SESSION['login']='Zaloguj się';
-  }
 }
 if(isset($_SESSION['login'])){
     if($_SESSION['login']!='Zaloguj się'){
@@ -54,11 +45,14 @@ if(isset($_SESSION['login'])){
         <input name=login id=login />
         <p>Hasło(Minimum 6 znaków)</p>
         <input name=password id=password type=password />
+        <p>Email</p>
+        <input name=email id=email />
         <input id=submito type=submit value=Zaloguj>
         </form>
-        <a href="rejestracja.php">Nie posiadasz konta? Załóż je!</a>
+        <a href="index.php">Mam już konto</a>
+        
       </div>
-      <img src="logowanie.jpg" alt="logowanie" class="tlo" />
     </main>
+    <img src="logowanie.jpg" alt="logowanie" class="tlo" />
   </body>
 </html>

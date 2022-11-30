@@ -5,8 +5,8 @@ class PoloczenieZBaza{
     private static $instance;
 
     private $host = "localhost";
-    private $user = "root"; //uzytkownik
-    private $haslo = ""; //haslo
+    private $user = "surpr1sen"; //uzytkownik
+    private $haslo = "Halaan58*3"; //haslo
    
 
     private $poloczenie;
@@ -19,7 +19,7 @@ class PoloczenieZBaza{
     }
 
     private function __construct(){
-        $this->poloczenie = new PDO("mysql:host={$this->host}",$this->user,$this->haslo); //tworzenie poloczenia z baza
+        $this->poloczenie = new PDO("mysql:host={$this->host};charset=utf8mb4",$this->user,$this->haslo); //tworzenie poloczenia z baza
     }
 
     public function getPolaczenie(){

@@ -14,7 +14,9 @@ if(!isset($_SESSION['motyw'])){
 if(!isset($_SESSION['login'])){
     $_SESSION['login']='Zaloguj się';
 }
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +25,6 @@ if(!isset($_SESSION['login'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link id=stylowanie rel="stylesheet" href=<?php echo $_SESSION['motyw'] ?> />
-    <script src="script.js" defer></script>
-    <script src="Weather.js" defer></script>
   </head>
   <body>
     <nav>
@@ -39,30 +39,23 @@ if(!isset($_SESSION['login'])){
       </ul>
       <div>
         <a href="uzytkownik.php"><?php echo $_SESSION['login'] ?></a>
-
         <img src="user.png" alt="użytkownik" />
       </div>
-      
     </nav>
-    <div class=pogoda>
-      <?php echo date('jS \of F Y h:i:s A')."<br>";?>
-    </div>
     <main>
-      <div>
-      <?php
+       <?php
 
       require_once("PoloczenieZBaza.php");
       $poloczenie1 = PoloczenieZBaza::getInstance();
       $poloczenie1->getPolaczenie()->query("use surpr1sen_osskars");
       
-      $select = $poloczenie1->getPolaczenie()->query("SELECT * FROM rezyserzy");
+      $select = $poloczenie1->getPolaczenie()->query("SELECT * FROM rezyserzy where id_rezyser={$_GET['idek']}");
       while($row=$select->fetch()){
-          echo "<div> <img src=".$row["zdjecie"]." alt=uwu> <div><p><a href='rezyser.php?idek={$row['id_rezyser']}'>".$row['imie']." ".$row['nazwisko']."</a></p></div></div>"; //użyć tego do wypisywania aktorów itp. z bazy na stronę, img nazwy w bazie, a obrazy w folderze img
+          echo "<div class=dedykowany> <img src=".$row["zdjecie"]." alt='zdjecie rezysera'> <div><p>".$row['imie']." ".$row['nazwisko']."</p> <p>".$row['opis']."</p></div></div>"; 
   
       }
       ?>
-      </div>
-     
+      
     </main>
   </body>
 </html>
